@@ -41,7 +41,7 @@ const projects = [
 export default function Portfolio() {
   return (
     <section
-      id="portfolio"
+      id="projects"
       className="relative bg-black py-24 lg:py-32 overflow-hidden"
     >
       {/* Background Glow */}
