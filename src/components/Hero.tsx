@@ -161,7 +161,7 @@ export default function Hero() {
                      </div>
 
                   <div className="text-white font-bold text-2xl">Jatin Hasiwal</div>
-                  <div className="text-yellow-400 text-sm">Uttar Pradesh</div>
+                  <div className="text-yellow-400 text-sm">Uttar Pradesh, India</div>
                 </div>
               </div>
             </div>
