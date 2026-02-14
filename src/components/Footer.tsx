@@ -56,7 +56,7 @@ export default function Footer() {
                 <Twitter size={18} />
               </a>
               <a
-                href="https://youtube.com/JatinHasiwal"
+                href="https://youtube.com/@JatinHasiwal"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-900 border border-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-yellow-400 hover:border-yellow-400/50 transition-all"
