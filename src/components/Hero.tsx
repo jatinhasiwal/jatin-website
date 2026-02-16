@@ -21,7 +21,7 @@ export default function Hero() {
 
       {/* ✅ Fixed Navbar */}
       <nav className="fixed top-0 left-0 w-full z-50 px-6 lg:px-12 py-6 flex items-center justify-between 
-      bg-black/20 backdrop-blur-xl border-b border-gray-800/30">
+      bg-black/00 backdrop-blur-xl border-b border-gray-800/30">
 
 
         {/* Logo */}
