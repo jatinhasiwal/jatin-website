@@ -91,32 +91,32 @@ export default function Hero() {
 
       {/* ✅ Fixed Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden fixed top-20 left-0 right-0 bg-black/95 backdrop-blur-lg z-40 px-6 py-8 space-y-6">
+        <div className="md:hidden fixed top-20 left-0 right-0 bg-black/00 backdrop-blur-xl z-40 px-6 py-8 space-y-6">
 
           <button
             onClick={() => scrollToSection("about")}
-            className="block w-full text-left text-gray-300 hover:text-yellow-400 transition-colors font-medium text-lg"
+            className="block w-full text-center text-gray-300 hover:text-yellow-400 transition-colors font-medium text-lg"
           >
             About
           </button>
 
           <button
             onClick={() => scrollToSection("skills")}
-            className="block w-full text-left text-gray-300 hover:text-yellow-400 transition-colors font-medium text-lg"
+            className="block w-full text-center text-gray-300 hover:text-yellow-400 transition-colors font-medium text-lg"
           >
             Skills
           </button>
 
           <button
             onClick={() => scrollToSection("projects")}
-            className="block w-full text-left text-gray-300 hover:text-yellow-400 transition-colors font-medium text-lg"
+            className="block w-full text-center text-gray-300 hover:text-yellow-400 transition-colors font-medium text-lg"
           >
             Projects
           </button>
 
           <button
             onClick={() => scrollToSection("contact")}
-            className="block w-full text-left text-gray-300 hover:text-yellow-400 transition-colors font-medium text-lg"
+            className="block w-full text-center text-gray-300 hover:text-yellow-400 transition-colors font-medium text-lg"
           >
             Contact
           </button>
