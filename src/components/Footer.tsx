@@ -4,7 +4,7 @@ import logoPic from "../components/images/logo.png";
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
-  const scrollToSection = (id) => {
+  const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: "smooth" });
   };
@@ -40,10 +40,25 @@ export default function Footer() {
 
             {/* Social Icons */}
             <div className="flex items-center gap-3 pt-2">
-              {[Instagram, Linkedin, Twitter, Youtube].map((Icon, index) => (
+              {[{
+      Icon: Instagram,
+      link: "https://instagram.com/jatin_.thakur",
+    },
+    {
+      Icon: Linkedin,
+      link: "https://linkedin.com/in/jatinhasiwal1/",
+    },
+    {
+      Icon: Twitter,
+      link: "https://twitter.com/yourusername",
+    },
+    {
+      Icon: Youtube,
+      link: "https://youtube.com/@JatinHasiwal",
+    },].map(({ Icon, link }, index) => (
                 <a
                   key={index}
-                  href="#"
+                  href={link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-gray-900 border border-gray-800 rounded-lg flex items-center justify-center 
