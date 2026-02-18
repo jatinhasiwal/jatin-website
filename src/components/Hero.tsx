@@ -106,7 +106,7 @@ export default function Hero() {
 
             <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight">
               Hi, I'm
-              <span className="block mt-2">
+              <span className="block">
                 <span className="relative w-fit mx-auto mt-2 text-[#E8602E]  bg-[#E8602E21] inline-block border border-[#E8602E] px-2 font-machina pt-[.06rem]">
                   Jatin Hasiwal
                   {/* Top Left Dot */}
