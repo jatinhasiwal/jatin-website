@@ -3,10 +3,8 @@ import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
-  // ✅ Form reference for EmailJS
-  const formRef = useRef<HTMLFormElement>(null);
+  const formRef = useRef(null);
 
-  // ✅ Form State
   const [formData, setFormData] = useState({
     from_name: "",
     from_email: "",
@@ -14,41 +12,34 @@ export default function Contact() {
     message: "",
   });
 
-  // ✅ Success + Loading State
   const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  // ✅ Handle Input Change
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  const handleChange = (e) => {
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
     }));
   };
 
-  // ✅ Handle Submit with EmailJS
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-
     if (!formRef.current) return;
 
-    setLoading(true); // ✅ Start loading
+    setLoading(true);
 
     emailjs
       .sendForm(
-        "service_bvf5qe6", // Service ID
-        "template_gxbwyvn", // Template ID
+        "service_bvf5qe6",
+        "template_gxbwyvn",
         formRef.current,
-        "zRgSmq946pcXn6pAN" // Public Key
+        "zRgSmq946pcXn6pAN"
       )
       .then(
         () => {
           setSuccess(true);
-          setLoading(false); // ✅ Stop loading
+          setLoading(false);
 
-          // ✅ Reset Form
           setFormData({
             from_name: "",
             from_email: "",
@@ -56,12 +47,11 @@ export default function Contact() {
             message: "",
           });
 
-          // ✅ Hide success after 4 sec
           setTimeout(() => setSuccess(false), 4000);
         },
         (error) => {
           console.log("EmailJS Error:", error.text);
-          setLoading(false); // Stop loading even if failed
+          setLoading(false);
         }
       );
   };
@@ -72,18 +62,18 @@ export default function Contact() {
       className="relative bg-gradient-to-b from-black via-gray-900 to-black py-24 lg:py-32 overflow-hidden"
     >
       {/* Background Glow */}
-      <div className="absolute top-0 left-1/2 w-96 h-96 bg-yellow-400/5 rounded-full blur-3xl -translate-x-1/2"></div>
+      <div className="absolute top-0 left-1/2 w-96 h-96 bg-[#E8602E]/5 rounded-full blur-3xl -translate-x-1/2"></div>
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-12">
         {/* Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-block bg-yellow-400/10 border border-yellow-400/30 text-yellow-400 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+          <div className="inline-block bg-[#E8602E]/10 border border-[#E8602E]/30 text-[#E8602E] px-4 py-2 rounded-full text-sm font-semibold mb-6">
             Get in Touch
           </div>
 
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
             Let's Connect &
-            <span className="block text-yellow-400">Collaborate</span>
+            <span className="block text-[#E8602E]">Collaborate</span>
           </h2>
 
           <p className="text-xl text-gray-400">
@@ -101,7 +91,7 @@ export default function Contact() {
               onSubmit={handleSubmit}
               className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl p-8 lg:p-12 space-y-6"
             >
-              {/* ✅ Success Message */}
+              {/* Success Message */}
               {success && (
                 <div className="bg-green-500/10 border border-green-500 text-green-400 px-4 py-3 rounded-lg text-center font-semibold">
                   ✅ Email sent successfully!
@@ -122,7 +112,8 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     placeholder="Name"
-                    className="w-full bg-black border border-gray-800 rounded-lg px-4 py-3 text-white focus:border-yellow-400 focus:outline-none"
+                    className="w-full bg-black border border-gray-800 rounded-lg px-4 py-3 text-white 
+                    focus:border-[#E8602E] focus:outline-none"
                   />
                 </div>
 
@@ -138,7 +129,8 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     placeholder="user-name@domain.com"
-                    className="w-full bg-black border border-gray-800 rounded-lg px-4 py-3 text-white focus:border-yellow-400 focus:outline-none"
+                    className="w-full bg-black border border-gray-800 rounded-lg px-4 py-3 text-white 
+                    focus:border-[#E8602E] focus:outline-none"
                   />
                 </div>
               </div>
@@ -154,7 +146,8 @@ export default function Contact() {
                   value={formData.subject}
                   onChange={handleChange}
                   placeholder="What's this about?"
-                  className="w-full bg-black border border-gray-800 rounded-lg px-4 py-3 text-white focus:border-yellow-400 focus:outline-none"
+                  className="w-full bg-black border border-gray-800 rounded-lg px-4 py-3 text-white 
+                  focus:border-[#E8602E] focus:outline-none"
                 />
               </div>
 
@@ -170,11 +163,12 @@ export default function Contact() {
                   required
                   rows={6}
                   placeholder="Share details about your opportunity or project..."
-                  className="w-full bg-black border border-gray-800 rounded-lg px-4 py-3 text-white focus:border-yellow-400 focus:outline-none resize-none"
+                  className="w-full bg-black border border-gray-800 rounded-lg px-4 py-3 text-white 
+                  focus:border-[#E8602E] focus:outline-none resize-none"
                 />
               </div>
 
-              {/* ✅ Submit Button with Loading */}
+              {/* Submit Button */}
               <button
                 type="submit"
                 disabled={loading}
@@ -182,10 +176,9 @@ export default function Contact() {
                 ${
                   loading
                     ? "bg-gray-500 cursor-not-allowed"
-                    : "bg-yellow-400 text-black hover:bg-yellow-300 hover:scale-105"
+                    : "bg-[#E8602E] text-black hover:bg-[#ff7a4d] hover:scale-105"
                 }`}
               >
-                {/* Spinner */}
                 {loading && (
                   <span className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
                 )}
@@ -200,13 +193,13 @@ export default function Contact() {
           <div className="space-y-6">
             {/* Email Card */}
             <div className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl p-8">
-              <div className="w-12 h-12 bg-yellow-400/10 rounded-lg flex items-center justify-center mb-4">
-                <Mail className="text-yellow-400" size={24} />
+              <div className="w-12 h-12 bg-[#E8602E]/10 rounded-lg flex items-center justify-center mb-4">
+                <Mail className="text-[#E8602E]" size={24} />
               </div>
               <h3 className="text-white font-bold text-xl mb-2">Email Me</h3>
               <a
                 href="mailto:hello@jatinhasiwal.in"
-                className="text-yellow-400 font-semibold hover:underline"
+                className="text-[#E8602E] font-semibold hover:underline"
               >
                 hello@jatinhasiwal.in
               </a>
@@ -214,8 +207,8 @@ export default function Contact() {
 
             {/* Response Card */}
             <div className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl p-8">
-              <div className="w-12 h-12 bg-yellow-400/10 rounded-lg flex items-center justify-center mb-4">
-                <MessageSquare className="text-yellow-400" size={24} />
+              <div className="w-12 h-12 bg-[#E8602E]/10 rounded-lg flex items-center justify-center mb-4">
+                <MessageSquare className="text-[#E8602E]" size={24} />
               </div>
               <h3 className="text-white font-bold text-xl mb-2">
                 Quick Response
