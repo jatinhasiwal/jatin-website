@@ -14,15 +14,15 @@ export default function Hero() {
 
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-black via-gray-900 to-black overflow-hidden">
-
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(232,96,46,0.1),transparent_50%)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(232,96,46,0.05),transparent_50%)]"></div>
 
       {/* Navbar */}
-      <nav className="fixed top-0 left-0 w-full z-50 px-6 lg:px-12 py-6 flex items-center justify-between 
-      bg-black/00 backdrop-blur-xl border-b border-gray-800/30">
-
+      <nav
+        className="fixed top-0 left-0 w-full z-50 px-6 lg:px-12 py-6 flex items-center justify-between 
+      bg-black/00 backdrop-blur-xl border-b border-gray-800/30"
+      >
         {/* Logo */}
         <div className="flex items-center space-x-3">
           <div className="w-10 h-10 rounded-lg overflow-hidden border border-[#E8602E]">
@@ -35,9 +35,7 @@ export default function Hero() {
 
           <div className="text-white">
             <div className="font-bold text-lg leading-none">Jatin</div>
-            <div className="text-[#E8602E] text-sm font-medium">
-              Hasiwal
-            </div>
+            <div className="text-[#E8602E] text-sm font-medium">Hasiwal</div>
           </div>
         </div>
 
@@ -98,10 +96,8 @@ export default function Hero() {
       {/* Hero Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 pt-32 lg:pt-40 pb-20">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
           {/* Left Side */}
           <div className="space-y-8">
-
             <div className="inline-block">
               <div className="bg-[#E8602E]/10 border border-[#E8602E]/30 text-[#E8602E] px-4 py-2 rounded-full text-sm font-semibold">
                 ✦ AI Enthusiast & Full-Stack Developer
@@ -110,7 +106,19 @@ export default function Hero() {
 
             <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight">
               Hi, I'm
-              <span className="block text-[#E8602E]">Jatin Hasiwal</span>
+              <span className="block mt-2">
+                <span className="relative w-fit mx-auto mt-2 text-[#E8602E]  bg-[#E8602E21] inline-block border border-[#E8602E] px-2 font-machina pt-[.06rem]">
+                  Jatin Hasiwal
+                  {/* Top Left Dot */}
+                  <span className="absolute aspect-square h-1  bg-white z-10 top-0 left-0 -translate-x-1/2 -translate-y-1/2"></span>
+                  {/* Top Right Dot */}
+                  <span className="absolute aspect-square h-1  bg-white z-10 top-0 right-0 translate-x-1/2 -translate-y-1/2"></span>
+                  {/* Bottom Right Dot */}
+                  <span className="corner-dot-br absolute aspect-square h-1 bg-white z-10 bottom-0 right-0 translate-x-1/2 translate-y-1/2"></span>
+                  {/* Bottom Left Dot */}
+                  <span className="absolute aspect-square h-1 bg-white bottom-0 left-0 -translate-x-1/2 translate-y-1/2 rounded-full"></span>
+                </span>
+              </span>
             </h1>
 
             <p className="text-xl text-gray-400 leading-relaxed">
@@ -176,12 +184,10 @@ export default function Hero() {
           {/* Right Side Profile Card */}
           <div className="relative">
             <div className="relative z-10 aspect-square rounded-2xl overflow-hidden border border-gray-800">
-
               <div className="absolute inset-0 bg-gradient-to-br from-[#E8602E]/20 to-transparent"></div>
 
               <div className="relative w-full h-full bg-gradient-to-br from-gray-900 to-black flex items-center justify-center">
                 <div className="text-center space-y-4">
-
                   <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-[#E8602E] shadow-lg">
                     <img
                       src={profilePic}
@@ -194,9 +200,7 @@ export default function Hero() {
                     Jatin Hasiwal
                   </div>
 
-                  <div className="text-[#E8602E] text-sm">
-                    Uttar Pradesh
-                  </div>
+                  <div className="text-[#E8602E] text-sm">Uttar Pradesh</div>
                 </div>
               </div>
             </div>
