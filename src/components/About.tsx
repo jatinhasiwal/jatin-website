@@ -34,8 +34,9 @@ export default function About() {
       <div className="absolute top-1/2 right-0 w-96 h-96 bg-[#E8602E]/5 rounded-full blur-3xl"></div>
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left Content */}
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          
+          {/* LEFT COLUMN: About Text */}
           <div className="space-y-8">
             <div className="inline-block bg-[#E8602E]/10 border border-[#E8602E]/30 text-[#E8602E] px-4 py-2 rounded-full text-sm font-semibold">
               About Me
@@ -69,42 +70,45 @@ export default function About() {
                 talented teams to leverage AI for solving complex problems.
               </p>
             </div>
-
-            {/* Divider */}
-            <div className="flex items-center gap-6 pt-6">
-              <div className="h-px flex-1 bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
-              <span className="text-[#E8602E] font-semibold">Background</span>
-              <div className="h-px flex-1 bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
-            </div>
           </div>
 
-          {/* Highlights Cards */}
-          <div className="grid grid-cols-1 gap-6">
-            {highlights.map((highlight, index) => {
-              const Icon = highlight.icon;
-              return (
-                <div
-                  key={index}
-                  className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-xl p-6 
-                  hover:border-[#E8602E]/50 transition-all hover:scale-105"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-[#E8602E]/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Icon className="text-[#E8602E]" size={24} />
-                    </div>
+          {/* RIGHT COLUMN: Background Divider + Cards */}
+          <div className="space-y-8">
+            {/* Divider (Now acts as a header for the right column on Desktop) */}
+            <div className="flex items-center gap-6">
+              <div className="h-px flex-1 bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+              <span className="text-[#E8602E] font-semibold tracking-wider text-sm">Background</span>
+              <div className="h-px flex-1 bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+            </div>
 
-                    <div>
-                      <h3 className="text-white font-bold text-lg mb-1">
-                        {highlight.title}
-                      </h3>
-                      <p className="text-gray-400 text-sm leading-relaxed">
-                        {highlight.description}
-                      </p>
+            {/* Highlights Cards */}
+            <div className="grid grid-cols-1 gap-6">
+              {highlights.map((highlight, index) => {
+                const Icon = highlight.icon;
+                return (
+                  <div
+                    key={index}
+                    className="group bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-xl p-6 
+                    hover:border-[#E8602E]/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#E8602E]/10"
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-[#E8602E]/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-[#E8602E]/20 transition-colors">
+                        <Icon className="text-[#E8602E]" size={24} />
+                      </div>
+
+                      <div>
+                        <h3 className="text-white font-bold text-lg mb-1">
+                          {highlight.title}
+                        </h3>
+                        <p className="text-gray-400 text-sm leading-relaxed">
+                          {highlight.description}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
 
@@ -131,7 +135,7 @@ export default function About() {
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
                 className="bg-[#E8602E] text-black px-8 py-4 rounded-lg font-semibold 
-                hover:bg-[#ff7a4d] transition-all hover:scale-105 w-full lg:w-auto"
+                hover:bg-[#ff7a4d] transition-all hover:scale-105 w-full lg:w-auto shadow-lg shadow-[#E8602E]/20"
               >
                 Let's Connect
               </button>
