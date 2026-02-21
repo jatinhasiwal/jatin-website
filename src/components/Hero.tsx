@@ -1,7 +1,7 @@
 import { ArrowRight, Menu, X, Github, Linkedin, Mail } from "lucide-react";
 import { useState } from "react";
 import profilePic from "../components/images/photo.jpg";
-import logoPic from "../components/images/logo1.png";
+import logoPic from "../components/images/lgo.png";
 
 export default function Hero() {
   const [menuOpen, setMenuOpen] = useState(false);
