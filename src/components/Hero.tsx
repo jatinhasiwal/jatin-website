@@ -114,9 +114,9 @@ export default function Hero() {
                   {/* Top Right Dot */}
                   <span className="absolute aspect-square h-1  bg-white z-10 top-0 right-0 translate-x-1/2 -translate-y-1/2"></span>
                   {/* Bottom Right Dot */}
-                  <span className="corner-dot-br absolute aspect-square h-1 bg-white z-10 bottom-0 right-0 translate-x-1/2 translate-y-1/2"></span>
+                  <span className="absolute aspect-square h-1 bg-white z-10 bottom-0 right-0 translate-x-1/2 translate-y-1/2"></span>
                   {/* Bottom Left Dot */}
-                  <span className="absolute aspect-square h-1 bg-white bottom-0 left-0 -translate-x-1/2 translate-y-1/2 rounded-full"></span>
+                  <span className="absolute aspect-square h-1 bg-white z-10 bottom-0 left-0 -translate-x-1/2 translate-y-1/2"></span>
                 </span>
               </span>
             </h1>
