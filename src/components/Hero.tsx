@@ -105,7 +105,7 @@ export default function Hero() {
             </div>
 
             <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight">
-              Hi, I'm </h1>
+              Hi, I'm 
               <span className="block">
                 <span className="relative w-fit mx-auto mt-2 text-[#E8602E]  bg-[#E8602E21] inline-block border border-[#E8602E] px-2 italic font-machina pt-[.06rem]">
                   Jatin Hasiwal
@@ -119,7 +119,7 @@ export default function Hero() {
                   <span className="absolute aspect-square h-1 bg-white z-10 bottom-0 left-0 -translate-x-1/2 translate-y-1/2"></span>
                 </span>
               </span>
-            
+            </h1>
 
             <p className="text-xl text-gray-400 leading-relaxed">
               A Computer Science graduate passionate about Web development, AI,
