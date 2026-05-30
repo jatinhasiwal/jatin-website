@@ -106,19 +106,17 @@ export default function Hero() {
 
             <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight">
               Hi, I'm 
-              <span className="block">
-                <span className="relative w-fit mx-auto mt-2 text-[#E8602E]  bg-[#E8602E21] inline-block border border-[#E8602E] px-2 italic font-machina pt-[.06rem]">
-                  Jatin Hasiwal
-                  {/* Top Left Dot */}
-                  <span className="absolute aspect-square h-1  bg-white z-10 top-0 left-0 -translate-x-1/2 -translate-y-1/2"></span>
-                  {/* Top Right Dot */}
-                  <span className="absolute aspect-square h-1  bg-white z-10 top-0 right-0 translate-x-1/2 -translate-y-1/2"></span>
-                  {/* Bottom Right Dot */}
-                  <span className="absolute aspect-square h-1 bg-white z-10 bottom-0 right-0 translate-x-1/2 translate-y-1/2"></span>
-                  {/* Bottom Left Dot */}
-                  <span className="absolute aspect-square h-1 bg-white z-10 bottom-0 left-0 -translate-x-1/2 translate-y-1/2"></span>
-                </span>
-              </span>
+              <span className="block mt-2">
+  <span className="relative inline-flex items-center justify-center text-[#E8602E] bg-[#E8602E21] border border-[#E8602E] px-3 py-1 italic font-machina">
+    Jatin Hasiwal
+
+    {/* Corner Dots */}
+    <span className="absolute h-1 w-1 bg-white top-0 left-0 -translate-x-1/2 -translate-y-1/2"></span>
+    <span className="absolute h-1 w-1 bg-white top-0 right-0 translate-x-1/2 -translate-y-1/2"></span>
+    <span className="absolute h-1 w-1 bg-white bottom-0 right-0 translate-x-1/2 translate-y-1/2"></span>
+    <span className="absolute h-1 w-1 bg-white bottom-0 left-0 -translate-x-1/2 translate-y-1/2"></span>
+  </span>
+</span>
             </h1>
 
             <p className="text-xl text-gray-400 leading-relaxed">
